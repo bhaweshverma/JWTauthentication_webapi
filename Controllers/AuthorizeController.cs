@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using Microsoft.Extensions.Logging;
 
 namespace JWTAuthentication.Controllers
 {
@@ -19,18 +20,24 @@ namespace JWTAuthentication.Controllers
         private IConfiguration _config;
         private readonly UserManager<User> _userManager; 
         private readonly SignInManager<User> _signInManager;
+        private readonly ILogger _logger;
 
         public AuthorizeController(IConfiguration config, 
-            UserManager<User> userManager, SignInManager<User> signInManager)
+            UserManager<User> userManager, SignInManager<User> signInManager, 
+            ILogger<AuthorizeController> logger)
         {
             _config = config;
             _userManager = userManager;
             _signInManager = signInManager;
+            _logger = logger;
         }
 
         [HttpPost]
         public async Task<IActionResult> Register([FromBody] User newUser, [FromHeader] string JWTAppKey, [FromHeader] string JWTAppSecret)
         {
+            var message = $"Register action got hit at {DateTime.UtcNow.ToLongTimeString()}";
+            _logger.LogInformation(message);
+
             string errors = string.Empty;
             IActionResult response = null;
             var x = _config["JWTApp:Key"];
@@ -72,6 +79,9 @@ namespace JWTAuthentication.Controllers
         [AllowAnonymous]
         public IActionResult Token([FromBody] User loggedUser, [FromHeader] string JWTAppKey, [FromHeader] string JWTAppSecret)
         {
+            var message = $"Token action got hit at {DateTime.UtcNow.ToLongTimeString()}";
+            _logger.LogInformation(message);
+
             IActionResult response = Unauthorized();
             
             if(ModelState.IsValid)
@@ -97,6 +107,9 @@ namespace JWTAuthentication.Controllers
         [HttpGet]
         public bool ValidateToken([FromHeader] string token)
         {
+            var message = $"ValidateToken action got hit at {DateTime.UtcNow.ToLongTimeString()}";
+            _logger.LogInformation(message);
+
             var tokenHandler = new JwtSecurityTokenHandler();
             try
             {
@@ -120,6 +133,9 @@ namespace JWTAuthentication.Controllers
         }
         private string GenerateJsonWebToken(User user)
         {
+             var message = $"Attempt to GenerateJsonWebToken (action) got hit at {DateTime.UtcNow.ToLongTimeString()} for user {user.Email}";
+            _logger.LogInformation(message);
+
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:Key"]));
             var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
@@ -142,6 +158,9 @@ namespace JWTAuthentication.Controllers
         }
         private async Task<bool> AuthenticateUser(string userEmail, string userPassword)
         {
+            var message = $"Attempt to AuthenticateUser (action) got hit at {DateTime.UtcNow.ToLongTimeString()} for user {userEmail}";
+            _logger.LogInformation(message);
+
             //first find user by checking if email id is valid or not
             var resultUser = await _userManager.FindByEmailAsync(userEmail);
             if(resultUser == null)
