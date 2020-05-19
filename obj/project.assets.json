@@ -9581,11 +9581,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\dev\\dev-dotnet-core\\JWTAuthentication\\JWTAuthentication.csproj",
+      "projectUniqueName": "E:\\dev\\dev-dotnet-core\\JWTauthentication_webapi\\JWTAuthentication.csproj",
       "projectName": "JWTAuthentication",
-      "projectPath": "E:\\dev\\dev-dotnet-core\\JWTAuthentication\\JWTAuthentication.csproj",
+      "projectPath": "E:\\dev\\dev-dotnet-core\\JWTauthentication_webapi\\JWTAuthentication.csproj",
       "packagesPath": "C:\\Users\\bhawesh.verma\\.nuget\\packages\\",
-      "outputPath": "E:\\dev\\dev-dotnet-core\\JWTAuthentication\\obj\\",
+      "outputPath": "E:\\dev\\dev-dotnet-core\\JWTauthentication_webapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bhawesh.verma\\AppData\\Roaming\\NuGet\\NuGet.Config",
