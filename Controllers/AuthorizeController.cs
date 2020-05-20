@@ -36,7 +36,7 @@ namespace JWTAuthentication.Controllers
         public async Task<IActionResult> Register([FromBody] User newUser, [FromHeader] string JWTAppKey, [FromHeader] string JWTAppSecret)
         {
             var message = $"Register action got hit at {DateTime.UtcNow.ToLongTimeString()}";
-            _logger.LogInformation(message);
+            _logger.LogWarning(message);
 
             string errors = string.Empty;
             IActionResult response = null;
@@ -80,7 +80,7 @@ namespace JWTAuthentication.Controllers
         public IActionResult Token([FromBody] User loggedUser, [FromHeader] string JWTAppKey, [FromHeader] string JWTAppSecret)
         {
             var message = $"Token action got hit at {DateTime.UtcNow.ToLongTimeString()}";
-            _logger.LogInformation(message);
+            _logger.LogWarning(message);
 
             IActionResult response = Unauthorized();
             
@@ -108,7 +108,7 @@ namespace JWTAuthentication.Controllers
         public bool ValidateToken([FromHeader] string token)
         {
             var message = $"ValidateToken action got hit at {DateTime.UtcNow.ToLongTimeString()}";
-            _logger.LogInformation(message);
+            _logger.LogWarning(message);
 
             var tokenHandler = new JwtSecurityTokenHandler();
             try
@@ -134,7 +134,7 @@ namespace JWTAuthentication.Controllers
         private string GenerateJsonWebToken(User user)
         {
              var message = $"Attempt to GenerateJsonWebToken (action) got hit at {DateTime.UtcNow.ToLongTimeString()} for user {user.Email}";
-            _logger.LogInformation(message);
+            _logger.LogWarning(message);
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:Key"]));
             var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -159,7 +159,7 @@ namespace JWTAuthentication.Controllers
         private async Task<bool> AuthenticateUser(string userEmail, string userPassword)
         {
             var message = $"Attempt to AuthenticateUser (action) got hit at {DateTime.UtcNow.ToLongTimeString()} for user {userEmail}";
-            _logger.LogInformation(message);
+            _logger.LogWarning(message);
 
             //first find user by checking if email id is valid or not
             var resultUser = await _userManager.FindByEmailAsync(userEmail);
