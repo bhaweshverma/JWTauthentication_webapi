@@ -11,6 +11,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Net.Http.Headers;
+using System.Linq;
 
 namespace JWTAuthentication.Controllers
 {
@@ -20,8 +23,8 @@ namespace JWTAuthentication.Controllers
         private IConfiguration _config;
         private readonly UserManager<User> _userManager; 
         private readonly SignInManager<User> _signInManager;
-        private readonly ILogger _logger;
-
+        private readonly ILogger<AuthorizeController> _logger;
+        
         public AuthorizeController(IConfiguration config, 
             UserManager<User> userManager, SignInManager<User> signInManager, 
             ILogger<AuthorizeController> logger)
@@ -35,9 +38,9 @@ namespace JWTAuthentication.Controllers
         [HttpPost]
         public async Task<IActionResult> Register([FromBody] User newUser, [FromHeader] string JWTAppKey, [FromHeader] string JWTAppSecret)
         {
-            var message = $"Register action got hit at {DateTime.UtcNow.ToLongTimeString()}";
-            _logger.LogWarning(message);
-
+            var agent = Request.Headers[HeaderNames.UserAgent].ToString();
+            var message = $"Request to Register new user - {newUser.Email} from {agent} at {DateTime.UtcNow.ToLongTimeString()} ";
+           
             string errors = string.Empty;
             IActionResult response = null;
             var x = _config["JWTApp:Key"];
@@ -55,23 +58,31 @@ namespace JWTAuthentication.Controllers
 
                     if(result.Succeeded)
                     {
-                        //await _signInManager.SignInAsync(user, isPersistent:false);
-                        return Ok(new {message = "User successfully registered!"});
+                        _logger.LogInformation(message + "SUCCESSFULLY executed!");
+                        return Ok(new {message = "User successfully registered!", email = newUser.Email});
                     }
 
                     foreach(var error in result.Errors)
                     {
-                        errors = error + " *** "+ error.Description;
+                        errors += error.Description + " | ";
                     }
-
+                     _logger.LogError(message + "FAILED with exception - "+ errors);    
                     response = BadRequest(new {error = errors});
                 }
                 else
                 {
+                     _logger.LogError(message + "FAILED with exception - "+ "API KEY or SECRET MISMATCH");
                     response = BadRequest();
                 }
             }
-            
+            else
+            {
+                errors = string.Join(" | ", ModelState.Values
+                                        .SelectMany(v => v.Errors)
+                                        .Select(e => e.ErrorMessage));
+
+                _logger.LogError(message + "FAILED with exception - "+ errors);
+            }
             return response;
         }
 
@@ -79,9 +90,9 @@ namespace JWTAuthentication.Controllers
         [AllowAnonymous]
         public IActionResult Token([FromBody] User loggedUser, [FromHeader] string JWTAppKey, [FromHeader] string JWTAppSecret)
         {
-            var message = $"Token action got hit at {DateTime.UtcNow.ToLongTimeString()}";
-            _logger.LogWarning(message);
-
+            var agent = Request.Headers[HeaderNames.UserAgent].ToString();
+            var message = $"Request for new Token for user - {loggedUser.Email} from {agent} at {DateTime.UtcNow.ToLongTimeString()} ";
+            
             IActionResult response = Unauthorized();
             
             if(ModelState.IsValid)
@@ -92,24 +103,42 @@ namespace JWTAuthentication.Controllers
                     if(isUserAuthenticated.Result == true)
                     {
                         var tokenString = GenerateJsonWebToken(loggedUser);
-                        response = Ok(new { token = tokenString, expires_in = 3600 } );
+                        if(!string.IsNullOrEmpty(tokenString))
+                        {
+                            _logger.LogInformation(message + "SUCCESSFULLY executed!");
+                            response = Ok(new { token = tokenString, expires_in = 3600 } );
+                        }
+                        else
+                        {
+                            _logger.LogError(message + "FAILED with exception - "+ "EMPTY TOKEN GENERATED");
+                        }
                     }
                 }
                 else
                 {
+                     _logger.LogError(message + "FAILED with exception - "+ "INCORRECT KEY SECRET INFO");
                     return BadRequest();
                 }
             }
-
+            else
+            {   
+                var errors = string.Join(" | ", ModelState.Values
+                                        .SelectMany(v => v.Errors)
+                                        .Select(e => e.ErrorMessage));
+             
+                _logger.LogError(message + "FAILED with exception - "+ errors);
+                return response;
+            }
+            
             return response;
         }
 
         [HttpGet]
         public bool ValidateToken([FromHeader] string token)
         {
-            var message = $"ValidateToken action got hit at {DateTime.UtcNow.ToLongTimeString()}";
-            _logger.LogWarning(message);
-
+            var agent = Request.Headers[HeaderNames.UserAgent].ToString();
+            var message = $"Request to ValidateToken from {agent} at {DateTime.UtcNow.ToLongTimeString()} ";
+           
             var tokenHandler = new JwtSecurityTokenHandler();
             try
             {
@@ -125,17 +154,16 @@ namespace JWTAuthentication.Controllers
 
                 }, out SecurityToken validatedToken);
             }
-            catch
+            catch(Exception e)
             {
+                _logger.LogError(message + "FAILED with exception - "+ e.Message);
                 return false;
             }
+            _logger.LogInformation(message + "SUCCESSFULLY executed!");
             return true;
         }
         private string GenerateJsonWebToken(User user)
         {
-             var message = $"Attempt to GenerateJsonWebToken (action) got hit at {DateTime.UtcNow.ToLongTimeString()} for user {user.Email}";
-            _logger.LogWarning(message);
-
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:Key"]));
             var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
@@ -158,18 +186,23 @@ namespace JWTAuthentication.Controllers
         }
         private async Task<bool> AuthenticateUser(string userEmail, string userPassword)
         {
-            var message = $"Attempt to AuthenticateUser (action) got hit at {DateTime.UtcNow.ToLongTimeString()} for user {userEmail}";
-            _logger.LogWarning(message);
-
+            var message = $"Attempt to Authenticate user - {userEmail} at {DateTime.UtcNow.ToLongTimeString()} ";
+            
             //first find user by checking if email id is valid or not
             var resultUser = await _userManager.FindByEmailAsync(userEmail);
             if(resultUser == null)
             {
+                _logger.LogError(message + "FAILED with exception - "+ "NO USER FOUND.");
                 return false;
             }
 
             var validateCredentials = await _userManager.CheckPasswordAsync(resultUser, userPassword);
             
+            if(validateCredentials)
+            _logger.LogInformation(message + "SUCCESSFULLY executed!");
+            else
+            _logger.LogError(message + "FAILED with exception - "+ "Invalid Password.");
+                
             return validateCredentials;
         }
     

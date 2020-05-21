@@ -19,6 +19,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="serilog.aspnetcore" Version="3.2.0" />
     <PackageReference Include="swashbuckle.aspnetcore" Version="5.4.1" />
   </ItemGroup>
 

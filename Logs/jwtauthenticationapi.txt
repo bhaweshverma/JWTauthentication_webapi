@@ -1,0 +1,639 @@
+2020-05-20 20:36:56.714 +05:30 [INF] Starting up application
+2020-05-20 20:36:57.870 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-20 20:36:58.370 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-20 20:36:58.371 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-20 20:36:58.371 +05:30 [INF] Hosting environment: Development
+2020-05-20 20:36:58.371 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-20 20:37:25.387 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5003/api/authorize/validatetoken  
+2020-05-20 20:37:25.405 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-20 20:37:25.494 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-20 20:37:25.546 +05:30 [INF] Route matched with {action = "ValidateToken", controller = "Authorize"}. Executing controller action with signature Boolean ValidateToken(System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-20 20:37:25.809 +05:30 [WRN] ValidateToken action got hit at 3:07:25 PM
+2020-05-20 20:37:26.121 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Boolean'.
+2020-05-20 20:37:26.145 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication) in 588.278ms
+2020-05-20 20:37:26.147 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-20 20:37:26.150 +05:30 [INF] Request finished in 770.2924ms 200 application/json; charset=utf-8
+2020-05-20 20:59:29.231 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-20 20:59:29.245 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 20:59:29.279 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-20 20:59:29.309 +05:30 [WRN] Token action got hit at 3:29:29 PM
+2020-05-20 20:59:29.311 +05:30 [WRN] Attempt to AuthenticateUser (action) got hit at 3:29:29 PM for user bv7@gmail.com
+2020-05-20 20:59:30.156 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-20 20:59:30.971 +05:30 [INF] Executed DbCommand (73ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-20 20:59:31.122 +05:30 [WRN] Attempt to GenerateJsonWebToken (action) got hit at 3:29:31 PM for user bv7@gmail.com
+2020-05-20 20:59:31.143 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-05-20 20:59:31.146 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 1866.7737ms
+2020-05-20 20:59:31.146 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 20:59:31.155 +05:30 [INF] Request finished in 1923.8211ms 200 application/json; charset=utf-8
+2020-05-20 21:13:59.665 +05:30 [INF] Starting up application
+2020-05-20 21:14:00.834 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-20 21:14:01.309 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-20 21:14:01.309 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-20 21:14:01.309 +05:30 [INF] Hosting environment: Development
+2020-05-20 21:14:01.309 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-20 21:14:21.797 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-20 21:14:21.809 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-20 21:14:21.878 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:14:22.006 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String, Microsoft.AspNetCore.Http.HttpContext) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-20 21:14:22.394 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 378.0688ms
+2020-05-20 21:14:22.399 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:14:22.401 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Could not create an instance of type 'Microsoft.AspNetCore.Http.HttpContext'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Alternatively, give the 'context' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext, Int32 propertyData)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-20 21:14:22.583 +05:30 [INF] Request finished in 791.8122ms 500 text/plain
+2020-05-20 21:15:18.366 +05:30 [INF] Starting up application
+2020-05-20 21:15:19.737 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-20 21:15:20.128 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-20 21:15:20.129 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-20 21:15:20.129 +05:30 [INF] Hosting environment: Development
+2020-05-20 21:15:20.129 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-20 21:15:39.294 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-20 21:15:39.306 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-20 21:15:39.374 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:15:39.466 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(Microsoft.AspNetCore.Http.HttpContext, JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-20 21:15:39.661 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 189.0501ms
+2020-05-20 21:15:39.664 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:15:39.666 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Could not create an instance of type 'Microsoft.AspNetCore.Http.HttpContext'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Alternatively, give the 'context' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext, Int32 propertyData)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-20 21:15:39.746 +05:30 [INF] Request finished in 455.1241ms 500 text/plain
+2020-05-20 21:18:07.073 +05:30 [INF] Starting up application
+2020-05-20 21:18:08.117 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-20 21:18:08.572 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-20 21:18:08.573 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-20 21:18:08.573 +05:30 [INF] Hosting environment: Development
+2020-05-20 21:18:08.574 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-20 21:18:12.762 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-20 21:18:12.774 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-20 21:18:12.860 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:18:12.923 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-20 21:18:13.195 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 266.2396ms
+2020-05-20 21:18:13.199 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:18:13.202 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.HttpContext' while attempting to activate 'JWTAuthentication.Controllers.AuthorizeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-20 21:18:13.370 +05:30 [INF] Request finished in 610.7659ms 500 text/plain
+2020-05-20 21:18:26.631 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-20 21:18:26.634 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:18:26.635 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-20 21:18:26.637 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 1.7758ms
+2020-05-20 21:18:26.638 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-20 21:18:26.639 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.HttpContext' while attempting to activate 'JWTAuthentication.Controllers.AuthorizeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-20 21:18:26.644 +05:30 [INF] Request finished in 12.4859ms 500 text/plain
+2020-05-21 11:20:31.480 +05:30 [INF] Starting up application
+2020-05-21 11:20:32.586 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 11:20:33.103 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 11:20:33.103 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 11:20:33.103 +05:30 [INF] Hosting environment: Development
+2020-05-21 11:20:33.103 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 11:20:51.406 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 11:20:51.421 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 11:20:51.499 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:20:51.536 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 11:20:51.748 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 196.4277ms
+2020-05-21 11:20:51.752 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:20:51.755 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.HttpContext' while attempting to activate 'JWTAuthentication.Controllers.AuthorizeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-21 11:20:51.835 +05:30 [INF] Request finished in 434.1241ms 500 text/plain
+2020-05-21 11:21:13.353 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 11:21:13.360 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:21:13.361 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 11:21:13.370 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 7.0425ms
+2020-05-21 11:21:13.371 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:21:13.372 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.HttpContext' while attempting to activate 'JWTAuthentication.Controllers.AuthorizeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-21 11:21:13.376 +05:30 [INF] Request finished in 23.5631ms 500 text/plain
+2020-05-21 11:22:27.246 +05:30 [INF] Starting up application
+2020-05-21 11:22:28.450 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 11:22:28.862 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 11:22:28.862 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 11:22:28.863 +05:30 [INF] Hosting environment: Development
+2020-05-21 11:22:28.863 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 11:22:42.401 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 11:22:42.419 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 11:22:42.537 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:22:42.612 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 11:22:42.879 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 256.4929ms
+2020-05-21 11:22:42.883 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:22:42.885 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.HttpContext' while attempting to activate 'JWTAuthentication.Controllers.AuthorizeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-21 11:22:43.011 +05:30 [INF] Request finished in 616.0854ms 500 text/plain
+2020-05-21 11:22:50.668 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 11:22:50.672 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:22:50.673 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 11:22:50.679 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 5.0336ms
+2020-05-21 11:22:50.680 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:22:50.681 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.HttpContext' while attempting to activate 'JWTAuthentication.Controllers.AuthorizeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-21 11:22:50.686 +05:30 [INF] Request finished in 17.3855ms 500 text/plain
+2020-05-21 11:23:43.920 +05:30 [INF] Starting up application
+2020-05-21 11:23:45.095 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 11:23:45.521 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 11:23:45.522 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 11:23:45.522 +05:30 [INF] Hosting environment: Development
+2020-05-21 11:23:45.522 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 11:23:53.031 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 11:23:53.041 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 11:23:53.104 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:23:53.178 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 11:35:35.812 +05:30 [INF] Starting up application
+2020-05-21 11:35:36.830 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 11:35:37.257 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 11:35:37.258 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 11:35:37.258 +05:30 [INF] Hosting environment: Development
+2020-05-21 11:35:37.259 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 11:35:42.564 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 11:35:42.575 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 11:35:42.679 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 11:35:42.714 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 11:35:42.906 +05:30 [WRN] Token action got hit from browser - PostmanRuntime/7.24.1 at 6:05:42 AM
+2020-05-21 14:02:09.855 +05:30 [INF] Starting up application
+2020-05-21 14:02:11.032 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 14:02:11.500 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 14:02:11.500 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 14:02:11.501 +05:30 [INF] Hosting environment: Development
+2020-05-21 14:02:11.501 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 14:02:54.631 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5003/api/authorize/validatetoken  
+2020-05-21 14:02:54.649 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 14:02:54.764 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 14:02:54.825 +05:30 [INF] Route matched with {action = "ValidateToken", controller = "Authorize"}. Executing controller action with signature Boolean ValidateToken(System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 14:02:55.153 +05:30 [WRN] Request to ValidateToken from PostmanRuntime/7.24.1 at 8:32:55 AM
+2020-05-21 14:02:55.385 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Boolean'.
+2020-05-21 14:02:55.417 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication) in 585.9277ms
+2020-05-21 14:02:55.419 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 14:02:55.422 +05:30 [INF] Request finished in 797.2077ms 200 application/json; charset=utf-8
+2020-05-21 14:04:38.227 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 14:04:38.238 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 14:04:38.261 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 14:04:38.291 +05:30 [WRN] Request for new Token for user - bv7@gmail.com from PostmanRuntime/7.24.1 at 8:34:38 AM
+2020-05-21 14:04:56.626 +05:30 [ERR] Attempt made to AuthenticateUser at 8:34:56 AM for user bv7@gmail.com
+2020-05-21 14:04:57.766 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 14:04:59.169 +05:30 [INF] Executed DbCommand (117ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 14:04:59.388 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 14:05:03.092 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 14:05:03.099 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 24837.6813ms
+2020-05-21 14:05:03.101 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 14:05:03.145 +05:30 [INF] Request finished in 24918.3524ms 401 
+2020-05-21 15:05:01.899 +05:30 [INF] Starting up application
+2020-05-21 15:05:02.846 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 15:05:03.239 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 15:05:03.241 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 15:05:03.241 +05:30 [INF] Hosting environment: Development
+2020-05-21 15:05:03.241 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 15:05:35.815 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:05:35.831 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 15:05:35.923 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:05:35.976 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:05:36.242 +05:30 [WRN] Request for new Token for user - bv7@gmail.com from PostmanRuntime/7.24.1 at 9:35:36 AM 
+2020-05-21 15:05:37.075 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:05:37.905 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:05:38.060 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:05:38.060 +05:30 [INF] Attempt made to AuthenticateUser at 9:35:36 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 15:05:38.061 +05:30 [ERR] Request for new Token for user - bv7@gmail.com from PostmanRuntime/7.24.1 at 9:35:36 AM FAILED with exception - ModelState is invalid
+2020-05-21 15:05:38.068 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 15:05:38.076 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 2091.6451ms
+2020-05-21 15:05:38.077 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:05:38.129 +05:30 [INF] Request finished in 2318.3935ms 401 
+2020-05-21 15:16:45.362 +05:30 [INF] Starting up application
+2020-05-21 15:16:46.570 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 15:16:47.040 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 15:16:47.041 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 15:16:47.041 +05:30 [INF] Hosting environment: Development
+2020-05-21 15:16:47.041 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 15:17:08.291 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:17:08.301 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 15:17:08.372 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:17:08.417 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:17:09.923 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:17:11.048 +05:30 [INF] Executed DbCommand (176ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:17:11.186 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:17:11.186 +05:30 [INF] Attempt made to AuthenticateUser at 9:47:09 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 15:17:11.187 +05:30 [ERR] Request for new Token for user - bv7@gmail.com from PostmanRuntime/7.24.1 at 9:47:09 AM FAILED with exception - System.Linq.Enumerable+SelectEnumerableIterator`2[Microsoft.AspNetCore.Mvc.ModelBinding.ModelError,System.String]
+2020-05-21 15:17:11.195 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 15:17:11.206 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 2777.0743ms
+2020-05-21 15:17:11.207 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:17:11.225 +05:30 [INF] Request finished in 2936.4588ms 401 
+2020-05-21 15:22:31.863 +05:30 [INF] Starting up application
+2020-05-21 15:22:32.902 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 15:22:33.302 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 15:22:33.303 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 15:22:33.303 +05:30 [INF] Hosting environment: Development
+2020-05-21 15:22:33.303 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 15:22:38.477 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:22:38.489 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 15:22:38.602 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:22:38.679 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:22:39.651 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:22:40.467 +05:30 [INF] Executed DbCommand (100ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:22:40.593 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:22:40.594 +05:30 [INF] Attempt made to AuthenticateUser at 9:52:38 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 15:27:06.798 +05:30 [INF] Starting up application
+2020-05-21 15:27:08.120 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 15:27:08.635 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 15:27:08.636 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 15:27:08.636 +05:30 [INF] Hosting environment: Development
+2020-05-21 15:27:08.636 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 15:27:17.555 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:27:17.567 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 15:27:17.633 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:27:17.695 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:27:18.711 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:27:19.536 +05:30 [INF] Executed DbCommand (72ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:27:19.693 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:27:19.693 +05:30 [INF] Attempt made to AuthenticateUser at 9:57:17 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 15:27:19.695 +05:30 [ERR] Request for new Token for user - bv7@gmail.com from PostmanRuntime/7.24.1 at 9:57:17 AM FAILED with exception - 
+2020-05-21 15:27:19.708 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 15:27:19.716 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 2012.8628ms
+2020-05-21 15:27:19.717 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:27:19.732 +05:30 [INF] Request finished in 2179.2848ms 401 
+2020-05-21 15:30:00.426 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:30:00.453 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:30:00.481 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:31:00.525 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:31:00.546 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:31:00.562 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:31:00.562 +05:30 [INF] Attempt made to AuthenticateUser at 10:01:00 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 15:36:46.866 +05:30 [INF] Starting up application
+2020-05-21 15:36:48.295 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 15:36:48.795 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 15:36:48.795 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 15:36:48.795 +05:30 [INF] Hosting environment: Development
+2020-05-21 15:36:48.796 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 15:37:10.922 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:37:10.934 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 15:37:11.025 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:37:11.079 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:37:12.213 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:37:13.067 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:37:13.233 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:37:13.233 +05:30 [INF] Attempt made to AuthenticateUser at 10:07:11 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 15:37:13.241 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 15:37:13.249 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 2159.3512ms
+2020-05-21 15:37:13.251 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:37:13.265 +05:30 [INF] Request finished in 2345.1831ms 401 
+2020-05-21 15:39:36.965 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 15:39:36.970 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 15:39:36.972 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 15:39:53.903 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 15:39:53.917 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 15:39:53.928 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 15:39:53.929 +05:30 [INF] Attempt made to AuthenticateUser at 10:09:53 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 16:09:16.661 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 16:09:16.662 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 1779689.7627ms
+2020-05-21 16:09:16.662 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:09:16.664 +05:30 [INF] Request finished in 1779698.932ms 401 
+2020-05-21 16:09:21.016 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 50
+2020-05-21 16:09:21.025 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:09:21.027 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:09:30.943 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:09:30.957 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:09:33.125 +05:30 [WRN] Invalid password for user 57c69b5a-9d9a-4a93-8082-baa7ede54705.
+2020-05-21 16:10:15.344 +05:30 [INF] Attempt made to AuthenticateUser at 10:39:30 AM for user bv7@gmail.com SUCCESSFULLY executed!
+2020-05-21 16:10:19.960 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 16:10:19.961 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 58933.1234ms
+2020-05-21 16:10:19.964 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:10:19.965 +05:30 [INF] Request finished in 58949.8881ms 401 
+2020-05-21 16:10:28.869 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 52
+2020-05-21 16:10:28.871 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:10:28.871 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:10:40.899 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:10:40.909 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:10:40.910 +05:30 [ERR] Attempt made to AuthenticateUser at 10:40:40 AM for user bv777@gmail.com FAILED with exception - no user found
+2020-05-21 16:11:18.199 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 16:11:18.200 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 49327.2398ms
+2020-05-21 16:11:18.201 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:11:18.202 +05:30 [INF] Request finished in 49333.7987ms 401 
+2020-05-21 16:11:35.579 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 52
+2020-05-21 16:11:35.581 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:11:35.583 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:12:21.686 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:12:21.697 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:17:24.904 +05:30 [ERR] Attempt made to AuthenticateUser at 10:42:20 AM for user bv777@gmail.com FAILED with exception - no user found
+2020-05-21 16:17:29.436 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 16:17:29.437 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 353852.9071ms
+2020-05-21 16:17:29.437 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:17:29.438 +05:30 [INF] Request finished in 353859.2333ms 401 
+2020-05-21 16:18:11.632 +05:30 [INF] Starting up application
+2020-05-21 16:18:12.648 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 16:18:13.089 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 16:18:13.089 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 16:18:13.089 +05:30 [INF] Hosting environment: Development
+2020-05-21 16:18:13.089 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 16:21:36.252 +05:30 [INF] Starting up application
+2020-05-21 16:21:37.409 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 16:21:37.850 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 16:21:37.850 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 16:21:37.850 +05:30 [INF] Hosting environment: Development
+2020-05-21 16:21:37.850 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 16:23:34.426 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/register application/json 69
+2020-05-21 16:23:34.437 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 16:23:34.606 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:23:34.676 +05:30 [INF] Route matched with {action = "Register", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:25:05.942 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:25:06.956 +05:30 [INF] Executed DbCommand (104ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2020-05-21 16:25:07.038 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:25:07.441 +05:30 [INF] Executed DbCommand (78ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256), @p16='?' (DbType = Int32), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Discriminator], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName], [Age], [Password], [Scope], [UserType])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2020-05-21 16:25:20.230 +05:30 [INF] Request to Register new user - bv9@gmail.com from PostmanRuntime/7.24.1 at 10:53:34 AM SUCCESSFULLY executed!
+2020-05-21 16:26:25.030 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-05-21 16:26:25.192 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication) in 170507.6094ms
+2020-05-21 16:26:25.194 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:26:25.205 +05:30 [INF] Request finished in 170782.3536ms 200 application/json; charset=utf-8
+2020-05-21 16:26:39.536 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/register application/json 69
+2020-05-21 16:26:39.540 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:26:39.542 +05:30 [INF] Route matched with {action = "Register", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:27:03.544 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:27:03.628 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2020-05-21 16:27:03.651 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:27:03.655 +05:30 [WRN] User 8a1e6d64-3f4b-4f95-8427-41040e76700d validation failed: DuplicateUserName;DuplicateEmail.
+2020-05-21 16:29:22.231 +05:30 [ERR] Request to Register new user - bv9@gmail.com from PostmanRuntime/7.24.1 at 10:56:39 AM FAILED with exception - Microsoft.AspNetCore.Identity.IdentityError *** Email 'bv9@gmail.com' is already taken.
+2020-05-21 16:29:24.986 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-05-21 16:29:25.061 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication) in 165518.8357ms
+2020-05-21 16:29:25.062 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:29:25.063 +05:30 [INF] Request finished in 165526.6666ms 400 application/json; charset=utf-8
+2020-05-21 16:29:29.372 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/register application/json 69
+2020-05-21 16:29:29.381 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:29:29.382 +05:30 [INF] Route matched with {action = "Register", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:29:38.455 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:29:38.489 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2020-05-21 16:29:38.540 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:29:38.541 +05:30 [WRN] User 93f0f9f7-c24e-4c22-b68f-1af2938a0940 validation failed: DuplicateUserName;DuplicateEmail.
+2020-05-21 16:29:48.869 +05:30 [ERR] Request to Register new user - bv9@gmail.com from PostmanRuntime/7.24.1 at 10:59:29 AM FAILED with exception - Microsoft.AspNetCore.Identity.IdentityError *** Email 'bv9@gmail.com' is already taken.
+2020-05-21 16:30:00.281 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-05-21 16:30:00.283 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication) in 30899.8719ms
+2020-05-21 16:30:00.284 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:30:00.285 +05:30 [INF] Request finished in 30916.6476ms 400 application/json; charset=utf-8
+2020-05-21 16:30:11.138 +05:30 [INF] Starting up application
+2020-05-21 16:30:13.155 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 16:30:13.630 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 16:30:13.631 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 16:30:13.631 +05:30 [INF] Hosting environment: Development
+2020-05-21 16:30:13.631 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 16:30:13.888 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/register application/json 69
+2020-05-21 16:30:13.899 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 16:30:13.964 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:30:14.019 +05:30 [INF] Route matched with {action = "Register", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:30:19.786 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:30:20.658 +05:30 [INF] Executed DbCommand (98ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2020-05-21 16:30:20.858 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:30:20.865 +05:30 [WRN] User 950a55b0-1317-4a67-b7cf-78b7dc728a67 validation failed: DuplicateUserName;DuplicateEmail.
+2020-05-21 16:32:23.307 +05:30 [ERR] Request to Register new user - bv9@gmail.com from PostmanRuntime/7.24.1 at 11:00:14 AM FAILED with exception - User name 'BV9' is already taken. | Email 'bv9@gmail.com' is already taken. | 
+2020-05-21 16:32:27.870 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-05-21 16:32:27.982 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication) in 133952.5483ms
+2020-05-21 16:32:27.985 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Register (JWTAuthentication)'
+2020-05-21 16:32:28.002 +05:30 [INF] Request finished in 134117.625ms 400 application/json; charset=utf-8
+2020-05-21 16:38:29.197 +05:30 [INF] Starting up application
+2020-05-21 16:38:30.871 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 16:38:31.548 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 16:38:31.549 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 16:38:31.550 +05:30 [INF] Hosting environment: Development
+2020-05-21 16:38:31.550 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 16:38:53.461 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 52
+2020-05-21 16:38:53.473 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 16:38:53.575 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:38:53.623 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 16:38:54.666 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 16:38:55.457 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 16:38:55.481 +05:30 [ERR] Attempt to Authenticate user - bv777@gmail.com at 11:08:53 AM FAILED with exception - NO USER FOUND.
+2020-05-21 16:38:55.488 +05:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 401
+2020-05-21 16:38:55.494 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 1864.9137ms
+2020-05-21 16:38:55.494 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 16:38:55.506 +05:30 [INF] Request finished in 2047.9398ms 401 
+2020-05-21 18:37:33.730 +05:30 [INF] Starting up application
+2020-05-21 18:37:34.736 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 18:37:35.302 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 18:37:35.304 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 18:37:35.306 +05:30 [INF] Hosting environment: Development
+2020-05-21 18:37:35.310 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 18:38:36.100 +05:30 [INF] Starting up application
+2020-05-21 18:38:37.370 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 18:38:37.890 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 18:38:37.891 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 18:38:37.891 +05:30 [INF] Hosting environment: Development
+2020-05-21 18:38:37.891 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
+2020-05-21 18:39:06.127 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/authorize/token application/json 49
+2020-05-21 18:39:06.136 +05:30 [WRN] Failed to determine the https port for redirect.
+2020-05-21 18:39:06.231 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 18:39:06.280 +05:30 [INF] Route matched with {action = "Token", controller = "Authorize"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Token(JWTAuthentication.Models.User, System.String, System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 18:39:07.447 +05:30 [INF] Entity Framework Core 3.1.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-05-21 18:39:08.216 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Age], [a].[Password], [a].[Scope], [a].[UserType]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2020-05-21 18:39:08.360 +05:30 [INF] Attempt to Authenticate user - bv7@gmail.com at 1:09:06 PM SUCCESSFULLY executed!
+2020-05-21 18:39:08.716 +05:30 [INF] Request for new Token for user - bv7@gmail.com from PostmanRuntime/7.24.1 at 1:09:06 PM SUCCESSFULLY executed!
+2020-05-21 18:39:08.721 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-05-21 18:39:08.737 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication) in 2448.7472ms
+2020-05-21 18:39:08.739 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.Token (JWTAuthentication)'
+2020-05-21 18:39:08.748 +05:30 [INF] Request finished in 2626.2555ms 200 application/json; charset=utf-8
+2020-05-21 18:39:26.668 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5003/api/authorize/validatetoken  
+2020-05-21 18:39:26.677 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 18:39:26.681 +05:30 [INF] Route matched with {action = "ValidateToken", controller = "Authorize"}. Executing controller action with signature Boolean ValidateToken(System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 18:39:26.810 +05:30 [INF] Request to ValidateToken from  at 1:09:26 PM SUCCESSFULLY executed!
+2020-05-21 18:39:26.811 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Boolean'.
+2020-05-21 18:39:26.813 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication) in 132.1103ms
+2020-05-21 18:39:26.813 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 18:39:26.814 +05:30 [INF] Request finished in 146.4699ms 200 application/json; charset=utf-8
+2020-05-21 18:41:34.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5003/api/authorize/validatetoken  
+2020-05-21 18:41:34.447 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 18:41:34.448 +05:30 [INF] Route matched with {action = "ValidateToken", controller = "Authorize"}. Executing controller action with signature Boolean ValidateToken(System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 18:41:34.477 +05:30 [INF] Request to ValidateToken from  at 1:11:34 PM SUCCESSFULLY executed!
+2020-05-21 18:41:34.479 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Boolean'.
+2020-05-21 18:41:34.485 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication) in 31.6633ms
+2020-05-21 18:41:34.486 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 18:41:34.487 +05:30 [INF] Request finished in 48.3544ms 200 application/json; charset=utf-8
+2020-05-21 18:44:32.141 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5003/api/authorize/validatetoken  
+2020-05-21 18:44:32.143 +05:30 [INF] Executing endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 18:44:32.150 +05:30 [INF] Route matched with {action = "ValidateToken", controller = "Authorize"}. Executing controller action with signature Boolean ValidateToken(System.String) on controller JWTAuthentication.Controllers.AuthorizeController (JWTAuthentication).
+2020-05-21 18:44:32.155 +05:30 [INF] Request to ValidateToken from  at 1:14:32 PM SUCCESSFULLY executed!
+2020-05-21 18:44:32.157 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Boolean'.
+2020-05-21 18:44:32.159 +05:30 [INF] Executed action JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication) in 7.3179ms
+2020-05-21 18:44:32.159 +05:30 [INF] Executed endpoint 'JWTAuthentication.Controllers.AuthorizeController.ValidateToken (JWTAuthentication)'
+2020-05-21 18:44:32.171 +05:30 [INF] Request finished in 19.9616ms 200 application/json; charset=utf-8
+2020-05-21 19:24:29.598 +05:30 [INF] Starting up application
+2020-05-21 19:24:30.616 +05:30 [INF] User profile is available. Using 'C:\Users\bhawesh.verma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-21 19:24:31.040 +05:30 [INF] Now listening on: http://localhost:5003
+2020-05-21 19:24:31.040 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2020-05-21 19:24:31.040 +05:30 [INF] Hosting environment: Development
+2020-05-21 19:24:31.040 +05:30 [INF] Content root path: E:\dev\dev-dotnet-core\JWTauthentication_webapi
