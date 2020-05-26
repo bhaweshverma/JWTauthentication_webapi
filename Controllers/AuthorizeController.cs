@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Net.Http.Headers;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace JWTAuthentication.Controllers
 {
@@ -43,9 +44,7 @@ namespace JWTAuthentication.Controllers
            
             string errors = string.Empty;
             IActionResult response = null;
-            var x = _config["JWTApp:Key"];
-            var y =  _config["JWTApp:Secret"];
-
+            
             if(ModelState.IsValid)
             {
                 if((JWTAppKey == _config["JWTApp:Key"]) && (JWTAppSecret == _config["JWTApp:Secret"]))
@@ -161,6 +160,18 @@ namespace JWTAuthentication.Controllers
             }
             _logger.LogInformation(message + "SUCCESSFULLY executed!");
             return true;
+        }
+        
+        [HttpGet]
+        public IEnumerable<string> GetAllUsers()
+        {
+            var users = _userManager.Users;
+            IEnumerable<string> emails = 
+                from u in users
+                where u.NormalizedEmail != null
+                select u.NormalizedEmail;
+            
+            return emails;
         }
         private string GenerateJsonWebToken(User user)
         {
