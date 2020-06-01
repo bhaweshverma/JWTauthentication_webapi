@@ -18,6 +18,7 @@ using System.Collections.Generic;
 
 namespace JWTAuthentication.Controllers
 {
+    [ApiController]
     [Route("api/[controller]/[action]")]
     public class AuthorizeController : Controller
     {
@@ -138,6 +139,11 @@ namespace JWTAuthentication.Controllers
             var agent = Request.Headers[HeaderNames.UserAgent].ToString();
             var message = $"Request to ValidateToken from {agent} at {DateTime.UtcNow.ToLongTimeString()} ";
            
+            if(token.Contains("Bearer"))
+            {
+                token = token.Replace("Bearer ", string.Empty);
+            }
+
             var tokenHandler = new JwtSecurityTokenHandler();
             try
             {
@@ -189,7 +195,7 @@ namespace JWTAuthentication.Controllers
                 _config["JWT:Issuer"],
                 claims,
                 null,
-                expires: DateTime.Now.AddMinutes(120),
+                expires: DateTime.Now.ToLocalTime().AddMinutes(120),
                 signingCredentials
             );
             
